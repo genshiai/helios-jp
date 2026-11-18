@@ -1,0 +1,8 @@
+Helios JP validator
+Copyright 2026 GENSHI AI contributors
+
+Original JP support code in this directory is licensed under Apache-2.0.
+It uses Helios FHIR libraries, copyright Helios Software, under MIT.
+The upstream license is retained at ../../LICENSE.md.
+FHIR implementation guides, terminology and official examples retain their provider licenses and are downloaded separately with checksum verification.
+The tests/fixtures directory contains synthetic examples only.

@@ -1,0 +1,7 @@
+{
+  "resourceType": "Patient",
+  "id": "fictional-patient",
+  "active": true,
+  "name": [{ "text": "検証用 架空患者" }],
+  "gender": "unknown"
+}

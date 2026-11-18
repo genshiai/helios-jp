@@ -1,0 +1,35 @@
+name: JP validator
+on:
+  push:
+    branches: [main]
+    paths: ['jp/**', '.github/workflows/jp-validator.yml']
+  pull_request:
+    paths: ['jp/**', '.github/workflows/jp-validator.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: jp/validator -> target
+      - run: cargo fmt --manifest-path jp/validator/Cargo.toml --check
+      - run: cargo run --manifest-path jp/validator/Cargo.toml --locked -- --packages jp/validator/clins-packages.lock.json prepare
+      - run: cargo test --manifest-path jp/validator/Cargo.toml --locked -- --include-ignored
+      - run: cargo clippy --manifest-path jp/validator/Cargo.toml --locked --all-targets -- -D warnings
+      - name: Check independent distribution
+        run: |
+          cargo metadata --manifest-path jp/validator/Cargo.toml --locked --format-version 1 > /tmp/metadata.json
+          python3 - <<'PY'
+          import json
+          metadata=json.load(open('/tmp/metadata.json'))
+          forbidden=[p['name'] for p in metadata['packages'] if p['name'].startswith('karte') or 'AGPL' in (p.get('license') or '')]
+          assert not forbidden, forbidden
+          PY

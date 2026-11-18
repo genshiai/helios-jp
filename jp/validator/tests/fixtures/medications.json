@@ -1,0 +1,153 @@
+{
+  "resourceType": "Bundle",
+  "id": "89012345-1234-4321-9123-123456789012",
+  "meta": {
+    "lastUpdated": "2026-11-17T12:00:00+09:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/Bundle"
+    ],
+    "tag": [
+      {
+        "system": "http://jpfhir.jp/fhir/clins/CodeSystem/BundleResourceType_CS",
+        "code": "MedicationRequest"
+      }
+    ]
+  },
+  "identifier": {
+    "system": "http://jpfhir.jp/fhir/clins/bundle-identifier",
+    "value": "1310000001^2026^89012345-1234-4321-9123-123456789012"
+  },
+  "type": "collection",
+  "timestamp": "2026-11-17T12:00:00+09:00",
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/export/89012345-1234-4321-9123-123456789012/Patient/12345678-1234-4321-9123-123456789012",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "12345678-1234-4321-9123-123456789012",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2026-11-17T12:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Patient_eCS|1.13.0"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.392.100495.20.3.51.11310000001",
+            "value": "0001"
+          },
+          {
+            "system": "http://jpfhir.jp/fhir/clins/Idsystem/JP_Insurance_memberID",
+            "value": "12345678:記号:1234:01"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "IDE"
+              }
+            ],
+            "use": "official",
+            "text": "試験 花子",
+            "family": "試験",
+            "given": [
+              "花子"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "SYL"
+              }
+            ],
+            "use": "official",
+            "text": "シケン ハナコ",
+            "family": "シケン",
+            "given": [
+              "ハナコ"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1990-01-01",
+        "address": [
+          {
+            "text": "東京都千代田区試験町1-1",
+            "country": "JP"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/export/89012345-1234-4321-9123-123456789012/MedicationRequest/90123456-1234-4321-9123-123456789012",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "90123456-1234-4321-9123-123456789012",
+        "meta": {
+          "versionId": "1",
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/MedicationRequest"
+          ],
+          "tag": [
+            {
+              "system": "https://example.org/fhir/CodeSystem/validation",
+              "code": "structure-only",
+              "display": "構造と必須項目のみ検証済み(プロファイル検証は未完了)"
+            }
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "架空の処方"
+        },
+        "subject": {
+          "reference": "https://example.org/fhir/export/89012345-1234-4321-9123-123456789012/Patient/12345678-1234-4321-9123-123456789012"
+        },
+        "encounter": {
+          "reference": "#45678901-1234-4321-9123-123456789012",
+          "type": "Encounter"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1錠 1日1回"
+          }
+        ],
+        "authoredOn": "2026-11-17T12:00:00+09:00",
+        "contained": [
+          {
+            "resourceType": "Encounter",
+            "id": "45678901-1234-4321-9123-123456789012",
+            "meta": {
+              "profile": [
+                "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Encounter_eCS|1.13.0"
+              ]
+            },
+            "status": "finished",
+            "class": {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+              "code": "AMB",
+              "display": "ambulatory"
+            },
+            "type": [
+              {
+                "text": "再診"
+              }
+            ],
+            "subject": {
+              "reference": "https://example.org/fhir/export/89012345-1234-4321-9123-123456789012/Patient/12345678-1234-4321-9123-123456789012"
+            },
+            "period": {
+              "start": "2026-11-17"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,370 @@
+{
+  "resourceType": "Bundle",
+  "id": "89012345-1234-4321-9123-123456789012",
+  "meta": {
+    "lastUpdated": "2026-11-17T12:00:00+09:00",
+    "profile": [
+      "http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Bundle_eReferral|1.13.0"
+    ]
+  },
+  "identifier": {
+    "system": "http://jpfhir.jp/fhir/clins/bundle-identifier",
+    "value": "1310000001^2026^89012345-1234-4321-9123-123456789012"
+  },
+  "type": "document",
+  "timestamp": "2026-11-17T12:00:00+09:00",
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/export/89012345-1234-4321-9123-123456789012/Composition/34567890-1234-4321-9123-123456789012",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "34567890-1234-4321-9123-123456789012",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2026-11-17T12:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|1.13.0"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber",
+            "valueString": "1"
+          }
+        ],
+        "identifier": {
+          "system": "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier",
+          "value": "urn:helios-jp:1310000001:Composition:34567890-1234-4321-9123-123456789012"
+        },
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes",
+              "code": "57133-1",
+              "display": "診療情報提供書"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://jpfhir.jp/fhir/Common/CodeSystem/doc-subtypecodes",
+                "code": "OUTPATIENT"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "https://example.org/fhir/export/89012345-1234-4321-9123-123456789012/Patient/12345678-1234-4321-9123-123456789012",
+          "type": "Patient"
+        },
+        "date": "2026-11-17T12:00:00+09:00",
+        "author": [
+          {
+            "reference": "https://example.org/fhir/export/89012345-1234-4321-9123-123456789012/Practitioner/78901234-1234-4321-9123-123456789012",
+            "type": "Practitioner"
+          },
+          {
+            "reference": "https://example.org/fhir/export/89012345-1234-4321-9123-123456789012/Organization/56789012-1234-4321-9123-123456789012",
+            "type": "Organization"
+          }
+        ],
+        "title": "診療情報提供書",
+        "encounter": {
+          "reference": "https://example.org/fhir/export/89012345-1234-4321-9123-123456789012/Encounter/45678901-1234-4321-9123-123456789012",
+          "type": "Encounter"
+        },
+        "custodian": {
+          "reference": "https://example.org/fhir/export/89012345-1234-4321-9123-123456789012/Organization/56789012-1234-4321-9123-123456789012",
+          "type": "Organization"
+        },
+        "event": [
+          {
+            "period": {
+              "start": "2026-11-17",
+              "end": "2026-11-17"
+            },
+            "code": [
+              {
+                "text": "診療情報提供書発行"
+              }
+            ]
+          }
+        ],
+        "section": [
+          {
+            "title": "紹介元情報",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                  "code": "920"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "https://example.org/fhir/export/89012345-1234-4321-9123-123456789012/Organization/56789012-1234-4321-9123-123456789012",
+                "type": "Organization"
+              }
+            ]
+          },
+          {
+            "title": "紹介先情報",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                  "code": "910"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "https://example.org/fhir/export/89012345-1234-4321-9123-123456789012/Organization/67890123-1234-4321-9123-123456789012",
+                "type": "Organization"
+              }
+            ]
+          },
+          {
+            "title": "構造情報",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                  "code": "300"
+                }
+              ]
+            },
+            "section": [
+              {
+                "title": "紹介目的",
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                      "code": "950"
+                    }
+                  ]
+                },
+                "text": {
+                  "status": "additional",
+                  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>架空の紹介目的。人が確認した内容。</p></div>"
+                }
+              },
+              {
+                "title": "傷病名・主訴",
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                      "code": "340"
+                    }
+                  ]
+                },
+                "text": {
+                  "status": "additional",
+                  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>架空の傷病名・主訴。人が確認した内容。</p></div>"
+                }
+              },
+              {
+                "title": "現病歴",
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                      "code": "360"
+                    }
+                  ]
+                },
+                "text": {
+                  "status": "additional",
+                  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>架空の現病歴。人が確認した内容。</p></div>"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/export/89012345-1234-4321-9123-123456789012/Patient/12345678-1234-4321-9123-123456789012",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "12345678-1234-4321-9123-123456789012",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2026-11-17T12:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Patient_eCS|1.13.0"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.392.100495.20.3.51.11310000001",
+            "value": "0001"
+          },
+          {
+            "system": "http://jpfhir.jp/fhir/clins/Idsystem/JP_Insurance_memberID",
+            "value": "12345678:記号:1234:01"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "IDE"
+              }
+            ],
+            "use": "official",
+            "text": "試験 花子",
+            "family": "試験",
+            "given": [
+              "花子"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "SYL"
+              }
+            ],
+            "use": "official",
+            "text": "シケン ハナコ",
+            "family": "シケン",
+            "given": [
+              "ハナコ"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1990-01-01",
+        "address": [
+          {
+            "text": "東京都千代田区試験町1-1",
+            "country": "JP"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/export/89012345-1234-4321-9123-123456789012/Practitioner/78901234-1234-4321-9123-123456789012",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "78901234-1234-4321-9123-123456789012",
+        "name": [
+          {
+            "text": "試験 医師"
+          }
+        ],
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2026-11-17T12:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Practitioner_eCS|1.13.0"
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/export/89012345-1234-4321-9123-123456789012/Organization/56789012-1234-4321-9123-123456789012",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "56789012-1234-4321-9123-123456789012",
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no",
+            "value": "1310000001"
+          }
+        ],
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ]
+          }
+        ],
+        "name": "架空医療機関",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2026-11-17T12:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Organization_eCS|1.13.0"
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/export/89012345-1234-4321-9123-123456789012/Organization/67890123-1234-4321-9123-123456789012",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "67890123-1234-4321-9123-123456789012",
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no",
+            "value": "1310000002"
+          }
+        ],
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ]
+          }
+        ],
+        "name": "架空紹介先",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2026-11-17T12:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Organization_eCS|1.13.0"
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/export/89012345-1234-4321-9123-123456789012/Encounter/45678901-1234-4321-9123-123456789012",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "45678901-1234-4321-9123-123456789012",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2026-11-17T12:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Encounter_eCS|1.13.0"
+          ]
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "text": "再診"
+          }
+        ],
+        "subject": {
+          "reference": "https://example.org/fhir/export/89012345-1234-4321-9123-123456789012/Patient/12345678-1234-4321-9123-123456789012"
+        },
+        "period": {
+          "start": "2026-11-17"
+        }
+      }
+    }
+  ]
+}

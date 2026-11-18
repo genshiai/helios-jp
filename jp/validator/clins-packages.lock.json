@@ -1,0 +1,89 @@
+{
+  "packages": [
+    {
+      "name": "hl7.fhir.r4.core",
+      "version": "4.0.1",
+      "file": "../data/fhir/hl7.fhir.r4.core-4.0.1.tgz",
+      "source": "https://packages.fhir.org/hl7.fhir.r4.core/4.0.1",
+      "sha256": "ebd7731df7d36b5b7d39d5fb6c9d77b44bb7fe5742f1a2e87f164738c3289d44"
+    },
+    {
+      "name": "jp-core.r4",
+      "version": "1.1.2-clins",
+      "file": "../data/fhir/jp-core.r4-1.1.2-clins.tgz",
+      "source": "https://jpfhir.jp/fhir/core/1.1.2-clins/jp-core.r4-1.1.2-clins.tgz",
+      "sha256": "ee8721d5127f73d6ddd97acd7ab11af3defe8187f2b84cc55ea00f2425245493"
+    },
+    {
+      "name": "jpfhir-terminology",
+      "version": "2.2610.0",
+      "file": "../data/fhir/jpfhir-terminology.r4-2.2610.0.tgz",
+      "source": "https://jpfhir.jp/fhir/core/terminology/jpfhir-terminology.r4-2.2610.0.tgz",
+      "sha256": "0033a90998ce295b367941bcb477bee47542134a5162d5107f416ae41a239a04"
+    },
+    {
+      "name": "jp-eCSCLINS.r4",
+      "version": "1.13.0",
+      "file": "../data/fhir/jp-eCSCLINS.r4-1.13.0.tgz",
+      "source": "https://jpfhir.jp/fhir/clins/pkghistory/jp-eCSCLINS.r4-1.13.0.tgz",
+      "sha256": "235dd43e608beb6118eedc5d02b21f94bf870c58e2eaa47190dd1a0fbbd2ac5d"
+    }
+  ],
+  "fixtures": [
+    {
+      "file": "../data/fhir/Patient-Example-JP-Patient-minimum.json",
+      "sha256": "b9bef8ffc6f764454d18f02a386aa6d23bd27fadde2b059cfd565a0abe4771a2",
+      "source": "https://jpfhir.jp/fhir/clins/igv1/Patient-Example-JP-Patient-minimum.json"
+    },
+    {
+      "file": "../data/fhir/Patient-Example-JP-Patient-standard-public-error1Public.json",
+      "sha256": "bc87f6b7da667ad74f075a0844fc80b702b2afda8d73d524b7f259118c207a18",
+      "source": "https://jpfhir.jp/fhir/clins/igv1/Patient-Example-JP-Patient-standard-public-error1Public.json"
+    },
+    {
+      "file": "../data/fhir/Patient-Example-JP-Patient-standard-public.json",
+      "sha256": "a605c33da954d2c1bd580fc1438996d3e9451dace7e1dcbcf8b24036d1204b72",
+      "source": "https://jpfhir.jp/fhir/clins/igv1/Patient-Example-JP-Patient-standard-public.json"
+    },
+    {
+      "file": "../data/fhir/Patient-Example-JP-Patient-standard.json",
+      "sha256": "27cfd06358d3d541c741a2ace2a3300b2ae2563ef1cf77cbac9eefecc4e1d29d",
+      "source": "https://jpfhir.jp/fhir/clins/igv1/Patient-Example-JP-Patient-standard.json"
+    },
+    {
+      "file": "../data/fhir/Bundle-Bundle-CLINS-Observations-Example-01.json",
+      "sha256": "c1250997cd9db0019e301b09cba85868a6b3a934e2906d9517add98f1339216b",
+      "source": "https://jpfhir.jp/fhir/clins/igv1/Bundle-Bundle-CLINS-Observations-Example-01.json"
+    },
+    {
+      "file": "../data/fhir/Bundle-Bundle-CLINS-PCS-Example-01.json",
+      "sha256": "3dbf2f2ec2afee0781a5819c66fac6512c2324926a4ae1e39195f9e5de605a68",
+      "source": "https://jpfhir.jp/fhir/clins/igv1/Bundle-Bundle-CLINS-PCS-Example-01.json"
+    },
+    {
+      "file": "../data/fhir/Bundle-Bundle-CLINS-Referral-NoEntry-Example-01.json",
+      "sha256": "4cd72083e77d5055e51a436f0fffe25c551f768179fd48f4bdfa7ce53f33c76a",
+      "source": "https://jpfhir.jp/fhir/clins/igv1/Bundle-Bundle-CLINS-Referral-NoEntry-Example-01.json"
+    },
+    {
+      "file": "../data/fhir/Condition-Example-JP-Condition-eCS-01.json",
+      "sha256": "9b4a5fe5dee82b7874c4ed9b8692a52672ba00d082284704680e091b73b19df5",
+      "source": "https://jpfhir.jp/fhir/clins/igv1/Condition-Example-JP-Condition-eCS-01.json"
+    },
+    {
+      "file": "../data/fhir/AllergyIntolerance-Example-JP-AllergyIntolerance-eCS-01.json",
+      "sha256": "790cf4ee4aac6c259eb64c2bd59fa2138d63f05708152909f73209994d6683ca",
+      "source": "https://jpfhir.jp/fhir/clins/igv1/AllergyIntolerance-Example-JP-AllergyIntolerance-eCS-01.json"
+    },
+    {
+      "file": "../data/fhir/MedicationRequest-Example-JP-MedReq-PO-SID-90-AMB.json",
+      "sha256": "3910d8bb878cfecc15173164fbbbdc862cb0724fe87b04f2f120d735824c7677",
+      "source": "https://jpfhir.jp/fhir/clins/igv1/MedicationRequest-Example-JP-MedReq-PO-SID-90-AMB.json"
+    },
+    {
+      "file": "../data/fhir/Observation-Example-JP-Obs-LabResult-eCS-Alb.json",
+      "sha256": "a94a587b377de95ba57c8fe0e34b5b781e253b871a6e5599f51dd1f2dd58381b",
+      "source": "https://jpfhir.jp/fhir/clins/igv1/Observation-Example-JP-Obs-LabResult-eCS-Alb.json"
+    }
+  ]
+}
